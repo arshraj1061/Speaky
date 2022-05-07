@@ -1,0 +1,7 @@
+{
+  "name": "Speaky",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
