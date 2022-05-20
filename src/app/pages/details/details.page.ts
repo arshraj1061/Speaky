@@ -23,13 +23,14 @@ export class DetailsPage implements OnInit {
   ) {}
 
   ngOnInit() {}
-  // getPermission() {
-  //   this.speechRecognition.hasPermission().then((hasPermission: boolean) => {
-  //     if (!hasPermission) {
-  //       this.speechRecognition.requestPermission().then(() => {});
-  //     }
-  //   });
-  // }
+  getPermission() {
+    this.speechRecognition.hasPermission().then((hasPermission: boolean) => {
+      if (!hasPermission) {
+        this.speechRecognition.requestPermission();
+        hasPermission = !hasPermission;
+      }
+    });
+  }
   startListning() {
     const options = {
       language: 'en-US',
